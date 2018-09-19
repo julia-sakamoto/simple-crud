@@ -22,10 +22,17 @@ const formReducer = (state = initialState.form, action) => {
     case CHANGE_AGE:
       return {
         ...state,
-        name: action.age
+        age: action.age
       }
     case INITIALIZE_FORM:
       return initialState.formReducer
+    default:
+      return state
+  }
+}
+
+const characterReducer = (state = initialState.characters, action) => {
+  switch (action.type) {
     default:
       return state
   }
